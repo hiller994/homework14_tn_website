@@ -2,7 +2,7 @@ import allure
 from allure_commons.types import Severity
 
 from tests.models.pages.bonus_page import BonusCalc
-import conftest
+
 
 @allure.tag('critical')
 @allure.severity(Severity.CRITICAL)
