@@ -9,7 +9,7 @@ from tests.models.pages.azs_page import AzsPage
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "Andrey Ignatov")
 @allure.feature("Сайт АЗС ТН")
-@allure.story("Тест пои. PROD")
+@allure.story("Тест поиска АЗС. PROD")
 @allure.link("https://azs.tatneft.ru/loyal", name="Testing")
 
 def test_search_azs(setup_browser):
