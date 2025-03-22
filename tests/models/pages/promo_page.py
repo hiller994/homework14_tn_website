@@ -6,7 +6,7 @@ class PromoPage:
 
     @allure.step('Открываем браузер')
     def open(self):
-        browser.open('/promotions')
+        browser.open('https://azs.tatneft.ru/promotions')
 
     @allure.step('Отображение главной акции')
     def header_promo(self):

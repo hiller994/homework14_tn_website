@@ -1,7 +1,7 @@
 import os
 
 import pytest
-from selene import browser, be, have, Config, Browser
+from selene import Config, Browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options #Options нужен для кастомного брауера
 from dotenv import load_dotenv
@@ -10,11 +10,11 @@ from utils import attach
 
 
 #Версия браузера
-DEFAULT_BROWSER_VERSION = '128.0' #константа для дефолтной версии браузера
+DEFAULT_BROWSER_VERSION = '127.0' #константа для дефолтной версии браузера
 def pytest_addoption(parser):
     parser.addoption( #через парсер зачитываем наши опции
         '--browser_version', #выбор версии браузера
-        default='100.0' #по дефолту
+        default='127.0' #по дефолту
     )
 
 @pytest.fixture(scope='session', autouse=True)
@@ -46,7 +46,7 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
-    browser = Browser(Config(driver=driver)) #мы создаем свой объект браузера. В классе браузера передаем конструктор Config, в конструктор Config передаем наш driver
+    browser = Browser(Config(driver=driver)) # мы создаем свой объект браузера. В классе браузера передаем конструктор Config, в конструктор Config передаем наш driver
 
 
     yield browser

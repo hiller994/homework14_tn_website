@@ -1,6 +1,5 @@
 import allure
 from allure_commons.types import Severity
-from selene import browser, be
 from tests.models.pages.promo_page import PromoPage
 
 @allure.tag('critical')
