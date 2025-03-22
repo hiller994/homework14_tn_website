@@ -9,9 +9,10 @@ from tests.models.pages.promo_page import PromoPage
 @allure.story("Тест страницы промо. PROD")
 @allure.link("https://azs.tatneft.ru/promotions", name="Testing")
 
-def test_open_sale(setup_browser):
+def test_open_sale():
     promo_page = PromoPage()
     promo_page.open()
+
     promo_page.header_promo()
     promo_page.other_promo()
     promo_page.click_header_promo()

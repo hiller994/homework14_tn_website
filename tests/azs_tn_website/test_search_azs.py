@@ -15,5 +15,6 @@ from tests.models.pages.azs_page import AzsPage
 def test_search_azs(setup_browser):
     azs_page = AzsPage()
     azs_page.open()
+
     azs_page.type_azs('г.Казань, ул.Гаврилова, 6 А')
     azs_page.azs_results('АЗС 200')

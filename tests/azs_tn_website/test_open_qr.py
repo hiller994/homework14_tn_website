@@ -13,5 +13,6 @@ from allure_commons.types import Severity
 def test_open_qr(setup_browser):
     qr_page = QrPage()
     qr_page.open()
+
     qr_page.open_qr()
     qr_page.visible_qr()

@@ -3,10 +3,9 @@ from selene import browser, be, have
 
 
 class PromoPage:
-
     @allure.step('Открываем браузер')
     def open(self):
-        browser.open('https://azs.tatneft.ru/promotions')
+        browser.open('/promotions')
 
     @allure.step('Отображение главной акции')
     def header_promo(self):

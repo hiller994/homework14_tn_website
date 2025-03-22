@@ -6,9 +6,6 @@ class BonusCalc:
     @allure.step("Открываем браузер")
     def open(self):
         browser.open('/loyal')
-        #browser.driver.execute_script("$('#RightSide_Advertisement').remove()")
-        #browser.driver.execute_script("$('#fixedban').remove()")
-        #browser.driver.execute_script("$('footer').remove()")
 
     @allure.step("Выставляем слайдер трат")
     def click_slider(self, cost):

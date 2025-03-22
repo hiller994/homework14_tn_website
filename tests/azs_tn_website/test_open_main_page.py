@@ -14,4 +14,5 @@ from tests.models.pages.main_page import MainPage
 def test_open_main_page(setup_browser):
     main_page = MainPage()
     main_page.open()
+
     main_page.should_element()
